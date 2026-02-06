@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 通用视口适配：手机/电脑/平板全兼容 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>2025年企业文化学习互评问卷</title>
     <style>
@@ -66,14 +65,14 @@
         .link-item a {
             text-decoration: none;
             color: #2f5496;
-            font-size: 17px;
+            font-size: 16px;
             transition: color 0.2s;
+            word-break: break-all; /* 适配长标题，自动换行 */
         }
         .link-item a:hover {
             color: #1a365d;
             text-decoration: underline;
         }
-        /* 已完成按钮样式 */
         .completed-btn {
             padding: 6px 14px;
             background-color: #5cb85c;
@@ -81,6 +80,7 @@
             border-radius: 4px;
             font-size: 13px;
             font-weight: normal;
+            white-space: nowrap; /* 按钮不换行 */
         }
         .footer {
             text-align: center;
@@ -89,13 +89,16 @@
             font-size: 14px;
             line-height: 1.5;
         }
-        /* 小屏手机适配 */
+        /* 手机小屏适配，长标题更友好 */
         @media (max-width: 480px) {
             .count-item p {
                 font-size: 24px;
             }
             .link-item {
                 padding: 15px 18px;
+            }
+            .link-item a {
+                font-size: 15px;
             }
         }
     </style>
@@ -117,44 +120,40 @@
     </div>
 
     <div class="link-list">
-        <div class="link-item"><a href="https://v.wjx.cn/vm/ORQwSNB.aspx#" target="_blank">郭钰帅</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/tOdtHwI.aspx#" target="_blank">许巍</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/wKsMSqj.aspx#" target="_blank">张磊</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/QxVj8Ve.aspx#" target="_blank">王军峰</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/wwJ7Meo.aspx#" target="_blank">王召召</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/tg8xd06.aspx#" target="_blank">刘宁</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/PvfOkh0.aspx#" target="_blank">袁梦琦</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/hxvWgeR.aspx#" target="_blank">王瑞</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/rXA1JrS.aspx#" target="_blank">许雪艳</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/Pp0ufOk.aspx#" target="_blank">盛彦彦</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/YfWUXNu.aspx#" target="_blank">李肃</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/ho3xRvW.aspx#" target="_blank">刘瑞雪</a><span class="status"></span></div>
-        <div class="link-item"><a href="https://v.wjx.cn/vm/rcAq5zW.aspx#" target="_blank">田梦珂</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/QxVj8Ve.aspx#" target="_blank">企业文化学习互评问卷—王军峰</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/rXA1JrS.aspx#" target="_blank">企业文化学习互评问卷—许雪艳</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/wKsMSqj.aspx#" target="_blank">企业文化学习互评问卷—张磊</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/ho3xRvW.aspx#" target="_blank">企业文化学习互评问卷—刘瑞雪</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/hxvWgeR.aspx#" target="_blank">企业文化学习互评问卷—王瑞</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/tg8xd06.aspx#" target="_blank">企业文化学习互评问卷—刘宁</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/YfWUXNu.aspx#" target="_blank">企业文化学习互评问卷—李肃</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/PvfOkh0.aspx#" target="_blank">企业文化学习互评问卷—袁梦琦</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/tOdtHwI.aspx#" target="_blank">企业文化学习互评问卷—许巍</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/wwJ7Meo.aspx#" target="_blank">企业文化学习互评问卷—王召召</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/Pp0ufOk.aspx#" target="_blank">企业文化学习互评问卷—盛彦彦</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/rcAq5zW.aspx#" target="_blank">企业文化学习互评问卷—田梦珂</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/ORQwSNB.aspx#" target="_blank">企业文化学习互评问卷—郭钰帅</a><span class="status"></span></div>
     </div>
 
     <div class="footer">
         评价说明：请基于事实、当面可说、促进成长的原则进行评价<br>
-        点击姓名跳转问卷，完成后自动标记「已完成」（仅本地设备可见，不影响他人）
+        点击标题跳转问卷，完成后自动标记「已完成」（仅本地设备可见，不影响他人）
     </div>
 
     <script>
-        // 全新初始状态：无任何操作记录，仅当前设备本地存储标记
+        // 纯净初始状态：0完成数，无任何操作记录，仅本地设备标记
         const links = document.querySelectorAll('.link-item a');
         const statusSpans = document.querySelectorAll('.status');
         const completedCountEl = document.getElementById('completedCount');
-        // 初始化为空数组，无任何已完成记录
         let completed = JSON.parse(localStorage.getItem('completedSurveys') || '[]');
-        // 初始化页面：0完成数，无任何已完成标记
         completedCountEl.textContent = completed.length;
 
-        // 点击链接标记已完成（仅当前设备生效）
+        // 点击跳转并本地标记已完成，各设备记录互不影响
         links.forEach((link, index) => {
             link.addEventListener('click', () => {
-                const name = link.textContent;
-                // 仅当未标记时添加，避免重复计数
-                if (!completed.includes(name)) {
-                    completed.push(name);
-                    // 更新本地存储、完成数、页面标记
+                const title = link.textContent;
+                if (!completed.includes(title)) {
+                    completed.push(title);
                     localStorage.setItem('completedSurveys', JSON.stringify(completed));
                     completedCountEl.textContent = completed.length;
                     statusSpans[index].textContent = '已完成';
