@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 通用视口配置，适配所有手机/电脑浏览器 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2025年企业文化学习互评问卷</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #2f5496;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .count-box {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .count-item {
+            text-align: center;
+        }
+        .count-item h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .count-item p {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2f5496;
+        }
+        .link-list {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .link-item {
+            padding: 18px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .link-item:last-child {
+            border-bottom: none;
+        }
+        .link-item a {
+            text-decoration: none;
+            color: #2f5496;
+            font-size: 17px;
+            transition: color 0.2s;
+        }
+        .link-item a:hover {
+            color: #1a365d;
+            text-decoration: underline;
+        }
+        /* 已完成按钮样式 */
+        .completed-btn {
+            padding: 6px 14px;
+            background-color: #5cb85c;
+            color: white;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: normal;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        /* 适配小屏幕手机 */
+        @media (max-width: 480px) {
+            .count-item p {
+                font-size: 24px;
+            }
+            .link-item {
+                padding: 15px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>2025年企业文化学习互评问卷</h1>
+    </div>
+
+    <div class="count-box">
+        <div class="count-item">
+            <h3>问卷总数</h3>
+            <p id="totalCount">13</p>
+        </div>
+        <div class="count-item">
+            <h3>已完成数</h3>
+            <p id="completedCount">0</p>
+        </div>
+    </div>
+
+    <div class="link-list">
+        <div class="link-item"><a href="https://v.wjx.cn/vm/ORQwSNB.aspx#" target="_blank">郭钰帅</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/tOdtHwI.aspx#" target="_blank">许巍</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/wKsMSqj.aspx#" target="_blank">张磊</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/QxVj8Ve.aspx#" target="_blank">王军峰</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/wwJ7Meo.aspx#" target="_blank">王召召</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/tg8xd06.aspx#" target="_blank">刘宁</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/PvfOkh0.aspx#" target="_blank">袁梦琦</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/hxvWgeR.aspx#" target="_blank">王瑞</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/rXA1JrS.aspx#" target="_blank">许雪艳</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/Pp0ufOk.aspx#" target="_blank">盛彦彦</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/YfWUXNu.aspx#" target="_blank">李肃</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/ho3xRvW.aspx#" target="_blank">刘瑞雪</a><span class="status"></span></div>
+        <div class="link-item"><a href="https://v.wjx.cn/vm/rcAq5zW.aspx#" target="_blank">田梦珂</a><span class="status"></span></div>
+    </div>
+
+    <div class="footer">
+        评价说明：请基于事实、当面可说、促进成长的原则进行评价<br>
+        点击姓名跳转问卷，完成后自动标记「已完成」（仅本地设备可见）
+    </div>
+
+    <script>
+        // 核心功能：点击标记已完成 + 本地存储
+        const links = document.querySelectorAll('.link-item a');
+        const statusSpans = document.querySelectorAll('.status');
+        const completedCountEl = document.getElementById('completedCount');
+        // 从本地存储读取已完成列表，无则为空数组
+        let completed = JSON.parse(localStorage.getItem('completedSurveys') || '[]');
+        // 初始化已完成数量和样式
+        completedCountEl.textContent = completed.length;
+        completed.forEach(name => {
+            const targetSpan = Array.from(statusSpans).find(span => span.previousElementSibling.textContent === name);
+            if (targetSpan) {
+                targetSpan.textContent = '已完成';
+                targetSpan.classList.add('completed-btn');
+            }
+        });
+        // 点击链接添加标记
+        links.forEach((link, index) => {
+            link.addEventListener('click', () => {
+                const name = link.textContent;
+                if (!completed.includes(name)) {
+                    completed.push(name);
+                    // 更新本地存储、数量、样式
+                    localStorage.setItem('completedSurveys', JSON.stringify(completed));
+                    completedCountEl.textContent = completed.length;
+                    statusSpans[index].textContent = '已完成';
+                    statusSpans[index].classList.add('completed-btn');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
