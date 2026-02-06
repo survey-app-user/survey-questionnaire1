@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 通用视口配置，适配所有手机/电脑浏览器 -->
+    <!-- 通用视口适配：手机/电脑/平板全兼容 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>2025年企业文化学习互评问卷</title>
     <style>
@@ -89,7 +89,7 @@
             font-size: 14px;
             line-height: 1.5;
         }
-        /* 适配小屏幕手机 */
+        /* 小屏手机适配 */
         @media (max-width: 480px) {
             .count-item p {
                 font-size: 24px;
@@ -134,32 +134,27 @@
 
     <div class="footer">
         评价说明：请基于事实、当面可说、促进成长的原则进行评价<br>
-        点击姓名跳转问卷，完成后自动标记「已完成」（仅本地设备可见）
+        点击姓名跳转问卷，完成后自动标记「已完成」（仅本地设备可见，不影响他人）
     </div>
 
     <script>
-        // 核心功能：点击标记已完成 + 本地存储
+        // 全新初始状态：无任何操作记录，仅当前设备本地存储标记
         const links = document.querySelectorAll('.link-item a');
         const statusSpans = document.querySelectorAll('.status');
         const completedCountEl = document.getElementById('completedCount');
-        // 从本地存储读取已完成列表，无则为空数组
+        // 初始化为空数组，无任何已完成记录
         let completed = JSON.parse(localStorage.getItem('completedSurveys') || '[]');
-        // 初始化已完成数量和样式
+        // 初始化页面：0完成数，无任何已完成标记
         completedCountEl.textContent = completed.length;
-        completed.forEach(name => {
-            const targetSpan = Array.from(statusSpans).find(span => span.previousElementSibling.textContent === name);
-            if (targetSpan) {
-                targetSpan.textContent = '已完成';
-                targetSpan.classList.add('completed-btn');
-            }
-        });
-        // 点击链接添加标记
+
+        // 点击链接标记已完成（仅当前设备生效）
         links.forEach((link, index) => {
             link.addEventListener('click', () => {
                 const name = link.textContent;
+                // 仅当未标记时添加，避免重复计数
                 if (!completed.includes(name)) {
                     completed.push(name);
-                    // 更新本地存储、数量、样式
+                    // 更新本地存储、完成数、页面标记
                     localStorage.setItem('completedSurveys', JSON.stringify(completed));
                     completedCountEl.textContent = completed.length;
                     statusSpans[index].textContent = '已完成';
